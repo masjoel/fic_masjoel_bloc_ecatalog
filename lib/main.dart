@@ -1,3 +1,4 @@
+import 'package:fic_masjoel_ecatalog/bloc/add_product/add_product_bloc.dart';
 import 'package:fic_masjoel_ecatalog/bloc/products/products_bloc.dart';
 import 'package:fic_masjoel_ecatalog/data/datasources/auth_datasource.dart';
 import 'package:fic_masjoel_ecatalog/data/datasources/product_data_source.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => ProductsBloc(ProductDataSource()),
+        ),
+        BlocProvider(
+          create: (context) => AddProductBloc(ProductDataSource()),
         ),
       ],
       child: MaterialApp(
